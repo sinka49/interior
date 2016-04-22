@@ -1,7 +1,3 @@
-DROP TABLE IF  EXISTS `#__mod_interior_cats` ;
-DROP TABLE IF  EXISTS `#__mod_interior_photos`;
-DROP TABLE IF  EXISTS `#__mod_interior_colors`;
-
 CREATE TABLE IF NOT EXISTS `#__mod_interior_cats` (
   `cat_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `object_id` int(11) NOT NULL DEFAULT '0',
