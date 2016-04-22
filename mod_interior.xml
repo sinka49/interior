@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>Interior</name>
+    <author>sInka</author>
+    <!--Дата создания модуля-->
+    <creationDate>2016-03-12</creationDate>
+    <copyright>(c)sInka</copyright>
+    <!--Лицензия модуля-->
+    <license>GPL 2.0</license>
+    <!--e-mail автора-->
+    <authorEmail>kris216830@gmail.com</authorEmail>
+    <!--Сайт автора-->
+    <authorUrl>http://vk.com/id144300138</authorUrl>
+    <!--Версия модуля-->
+    <version>0.0.2</version>
+    <description>Модуль примерки интерьеров</description>
+    <!--Описываем какие файлы присутствуют в модуле-->
+    <!--Вместо тега filename можно вставить folder, т.е. папки которые есть в модуле, 
+    что облегчает описание содержимого, потому что не нужно описывать каждый файл-->
+    <install>
+    <sql>
+        <file driver="mysql" charset="utf8">sql/install.sql</file>
+    </sql>
+    </install>
+     
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+    <files>
+
+        <filename module="mod_interior">mod_interior.php</filename>
+        <filename>mod_interior.xml</filename>
+        <filename>index.html</filename>
+        <filename>ajax.php</filename>
+        <folder>administrator</folder>
+        <folder>images</folder>
+        <folder>css</folder>
+        <folder>sql</folder>
+        <folder>tmpl</folder>
+        <folder>uploads</folder>
+
+    </files>
+    <config>
+
+    	<fields name="params">
+            <fieldset name="basic" addfieldpath="/modules/mod_interior/administrator/field/">
+                <field name="objecting" type="objecting" label="Выберите" />
+               
+            </fieldset>
+            <fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+                
+        </fields>
+
+    </config>
+
+</extension>

@@ -1,0 +1,104 @@
+
+.mod_interior li{
+    list-style: none;
+}
+.mod_interior  ul:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.floating {
+	float:left;
+	margin-right: 30px;
+	cursor: pointer;
+}
+
+.mod_interior ul li img {
+	width: 50px;
+	height: 50px;
+}
+
+.mod_interior  #room {
+	display: flex;
+	flex-direction: row;
+	justify-content:space-around;
+}
+
+
+
+
+.room {
+    width: 590px;
+    height: 400px;
+    position: relative;
+    perspective: 150px;
+    outline: 1px solid rebeccapurple;
+    overflow: hidden;
+}
+
+.room div{
+	position: absolute;
+}
+
+.stenaa img{
+	margin: 30px auto;
+}
+.stenaa {
+    background: url(../images/w1.jpg) repeat ;
+    background-size: 70px;
+    top: 123px;
+    left: 201px;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    text-align: center;
+        width: 185px;
+    height: 134px;
+}
+.stenab {
+    background: url(../images/w1.jpg) repeat;
+    background-size: 70px;
+    top: 93px;
+    left: 74px;
+    transform: rotateX(0deg) rotateY(73deg) rotateZ(0deg);
+    height: 239px !important;
+    width: 132px !important;
+}
+.divan {
+    width: 241px;
+    height: 215px;
+    position: absolute;
+    z-index: 44;
+    left: 188px;
+    top: 111px;
+}
+.stenaс {
+   background: url(../images/w1.jpg) repeat;
+    background-size: 70px;
+    top: 92px;
+    left: 380px;
+    transform: rotateX(0deg) rotateY(-73deg) rotateZ(0deg);
+    height: 243px;
+    width: 132px;
+}
+
+
+.ceiling {
+    background: url(../images/c1.jpg) repeat ;
+    background-size: 70px;
+    transform: rotateX(80deg) rotateY(0) rotateZ(0deg);
+    left: 143px;
+    top: 0px;
+    width: 300px ;
+    height: 185px;
+}
+
+
+.floor{
+    background: url(../images/f1.jpg) repeat ;
+    background-size: 70px;
+    left: 142px;
+    transform: rotateX(80deg) rotateY(0deg) rotateZ(0deg);
+    width: 300px;
+    height: 185px;
+    bottom: 0;
+}

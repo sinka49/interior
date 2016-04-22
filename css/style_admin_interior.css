@@ -1,0 +1,92 @@
+/* Базовый контейнер табов */
+.tabs {
+  min-width: 320px;
+  max-width: 800px;
+  padding: 0px;
+  margin: 0 auto; 
+}
+/* стили секций с содержанием */
+.tabs section {
+  display: none;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.tabs input {
+  display: none;
+}
+/* стили вкладок (табов) */
+.tabs label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #aaa;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
+  border-radius: 3px 3px 0 0;
+}
+
+/* изменения стиля заголовков вкладок при наведении */
+.tabs label:hover {
+  color: #888;
+  cursor: pointer;
+}
+/* стили для активной вкладки */
+.tabs input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 1px solid #009933;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+}
+/* активация секций с помощью переключателя :checked */
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5,
+#tab6:checked ~ #content6 {
+  display: block;
+}
+
+.pre {
+    padding: 20px;
+    border: 1px dashed rgba(0, 0, 0, 0.24);
+}
+.pre th, .pre td {
+    padding: 10px;
+}
+
+.error {
+    display: none;
+    border: 2px solid rgba(237, 116, 116, 0.55);
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: rgb(237, 116, 116);
+}
+
+.tableCont {
+    width: 100%;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.tableCont table{
+  width: 100%;
+}
+
+.tableCont table tr{
+border-bottom: 1px dotted #ccc; 
+}
+.tableCont table td{
+  text-align: center;
+}
+
+.tableCont input[type=checkbox]{
+width: 50px;
+height: 50px;
+}
